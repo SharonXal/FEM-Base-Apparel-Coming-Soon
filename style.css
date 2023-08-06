@@ -1,0 +1,237 @@
+/*  
+We're coming soon
+
+Hello fellow shoppers! We're currently building our new fashion store. 
+Add your email below to stay up-to-date with announcements and our launch deals.
+
+Email Address
+*/
+
+:root{
+    --desaturated-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    --dark-grayish-red: hsl(0, 6%, 24%);
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Josefin Sans';
+    font-size: 16px;    
+}
+
+/* body,
+#main-container,
+#header-image, #card-container,
+.text-email-container, #text-container,
+#email-container, #email-id, .icon-error, .error-text,
+button, #image-container, #desktop-image, #mobile-image{
+    border: 1px solid black;
+} */
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#main-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#header-image{
+    width: 15%;
+    margin-left: 10%;
+}
+
+#card-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.text-email-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+#text-container{
+    margin-left: 16.8%;
+}
+h1, span{
+    letter-spacing: 15px;
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 60px;
+    margin-bottom: 10px;
+}
+span{
+    color: var(--desaturated-red);
+    font-weight: 300;
+}
+p{
+    width: 60%;
+    line-height: 28px;
+    color: var(--desaturated-red);
+}
+
+#email-container{
+    margin-left: 16.8%;
+    width: 70%;
+    position: relative;
+}
+#email-id{
+    width: 60%;
+    height: 40px;
+    border-radius: 30px;
+    padding-left: 25px;
+    background-color: transparent;
+    outline: none;
+    opacity: 0.7;
+    border: 1px solid var(--desaturated-red);
+}
+::placeholder{
+    font-size: 0.9rem;
+    color: var(--desaturated-red);
+}
+button{
+    position: absolute;
+    width: 12%;
+    height: 40px;
+    border-radius: 20px;
+    translate: -40px 0px;
+    background-image: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    transform: scale(1.1);
+    background-image: linear-gradient(to right, hsl(0, 100%, 98%), hsl(0, 80%, 86%));
+}
+button img{
+    width: 10px;
+    translate: 2px 2px;
+}
+.icon-error, .error-text{
+    display: none;
+}
+.icon-error-show{
+    position: absolute;
+    width: 20px;
+    translate: -70px 10px;
+}
+.error-text-show{
+    position: absolute;
+    font-size: 0.9rem;
+    color: var(--soft-red);
+    margin-left: 25px;
+    margin-top: 2px;
+}
+
+#desktop-image{
+    margin-top: -40px;
+}
+#mobile-image{
+    display: none;
+}
+
+@media (max-width: 1290px){
+    #main-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: 0;
+    }
+    #header-image{
+        width: 38%;
+        padding: 0px;
+        margin: 0px;
+        margin-top: 20px;
+        margin-left: -170px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #card-container{
+        flex-direction: column-reverse;
+        margin-top: 80px;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+        margin-top: 30px;
+    }
+    .text-email-container{
+        width: 100%;
+        margin: 0px;
+    }
+    #text-container{
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #text-container p{
+        margin-top: -10px;
+        width: 38%;
+        text-align: center;
+    }
+    #email-container{
+        width: 100%;
+        margin: 0;
+        margin-top: 10px;
+        margin-bottom: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #email-id{
+        margin: 0;
+        margin-left: -140px;
+        width: 650%;
+    }
+    button{
+        width: 6%;
+        translate: 170px -40px;
+    }
+    .icon-error-show{
+        translate: 140px -30px;
+    }
+    .error-text-show{
+        translate: -140px;
+    }
+    #desktop-image{
+        display: none;
+    }
+    #mobile-image{
+        display: flex;
+    }
+}
+
+@media (max-width: 802px){
+    #text-container p{
+        width: 45%;
+    }
+    #email-id{
+        width: 640%;
+    }
+    button{
+        width: 10%;
+    }
+}
+
+@media (max-width: 500px){
+    #email-id{
+        width: 640%;
+    }
+    button{
+        width: 10%;
+    }
+}
